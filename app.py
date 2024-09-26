@@ -1,5 +1,6 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+import bitsandbytes as bnb
 
 class InferlessPythonModel:
     def initialize(self):
@@ -9,7 +10,9 @@ class InferlessPythonModel:
             model_id, 
             device_map="cuda",  
             torch_dtype="auto",  
-            trust_remote_code=True
+            trust_remote_code=True,
+            load_in_4bit=True,
+            quantization_config=bnb.QuantizationConfig(load_in_4bit=True)
         )
         self.pipe = pipeline("text-generation", model=self.model, tokenizer=self.tokenizer)
 
