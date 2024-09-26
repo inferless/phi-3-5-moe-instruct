@@ -4,6 +4,7 @@ build:
   - "torch==2.3.1"
   - "accelerate==0.31.0"
   - "transformers==4.43.0" 
+  - "bitsandbytes"
   run:
   - "pip install packaging"
   - "pip install flash_attn==2.5.8"
