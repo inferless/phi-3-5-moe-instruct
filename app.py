@@ -11,8 +11,7 @@ class InferlessPythonModel:
             device_map="cuda",  
             torch_dtype="auto",  
             trust_remote_code=True,
-            load_in_4bit=True,
-            quantization_config=bnb.QuantizationConfig(load_in_4bit=True)
+            load_in_4bit=True
         )
         self.pipe = pipeline("text-generation", model=self.model, tokenizer=self.tokenizer)
 
