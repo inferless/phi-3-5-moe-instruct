@@ -1,5 +1,5 @@
 # Tutorial - Deploy Phi-3.5-MoE
-Microsoft has introduced https://huggingface.co/microsoft/Phi-3.5-MoE-instruct , a compact yet powerful model designed for instruction-following tasks.
+Microsoft has introduced [Phi-3.5-MoE](https://huggingface.co/microsoft/Phi-3.5-MoE-instruct), a compact yet powerful model designed for instruction-following tasks.
 This model is part of the Phi-3 family, known for its efficiency and high performance. The Phi-3 Mini-128K-Instruct exhibited robust, state-of-the-art performance among models with fewer than 13 billion parameters.
 
 ### Fork the Repository
