@@ -5,6 +5,7 @@ build:
   - "accelerate==0.31.0"
   - "transformers==4.43.0" 
   - "bitsandbytes"
+  - "huggingface-hub==0.25.2"
   run:
   - "pip install packaging"
   - "pip install flash_attn==2.5.8"
