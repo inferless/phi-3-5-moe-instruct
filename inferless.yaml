@@ -1,6 +1,6 @@
 version: 1.0.0
 
-name: phi-3.5-moe-instruct
+name: phi-3-5-moe-instruct
 import_source: GIT
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
