@@ -1,3 +1,6 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 import bitsandbytes as bnb
@@ -5,6 +8,7 @@ import bitsandbytes as bnb
 class InferlessPythonModel:
     def initialize(self):
         model_id = "microsoft/Phi-3.5-MoE-instruct"
+        snapshot_download(repo_id=model_id,allow_patterns=["*.safetensors"])
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
         self.model = AutoModelForCausalLM.from_pretrained(
             model_id, 
